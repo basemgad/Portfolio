@@ -4,7 +4,10 @@ import portfolioVideo from './assets/portfoliovideo.mp4';
 import resumeVideo from './assets/resumevideo.mp4';
 import contactVideo from './assets/contact.mp4';
 
-const profilePhoto = '/portrait.png';
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
+const profilePhoto = publicAsset('portrait.png');
+const resumePdf = publicAsset('resume.pdf');
 
 const tabs = [
   { id: 'about', label: 'About' },
@@ -20,7 +23,7 @@ const projects = [
     description:
       'Full-stack AI image generation app that turns dream descriptions into visuals with secure API routing, daily usage limits, and persistent user tracking.',
     href: 'https://dream-maker-1.onrender.com/',
-    image: '/DreamMaker.png',
+    image: publicAsset('DreamMaker.png'),
   },
   {
     title: 'Revibe AI (Hackathon Winner)',
@@ -28,7 +31,7 @@ const projects = [
     description:
       'Award-winning AI design platform that transforms room photos into personalized redesigns with structured furniture recommendations.',
     href: 'https://devpost.com/software/revibe-ai',
-    image: '/Revibe.png',
+    image: publicAsset('Revibe.png'),
   },
   {
     title: "Scholar's Companion",
@@ -36,7 +39,7 @@ const projects = [
     description:
       'Ranks Google articles by reading difficulty using web scraping and a readability-scoring algorithm to match students with accessible resources.',
     href: 'https://scholarscompanion.com/',
-    image: '/scholars.png',
+    image: publicAsset('scholars.png'),
   },
 ];
 
@@ -252,7 +255,7 @@ function AboutPanel({ onSelectSection }) {
           >
             View Projects
           </button>
-          <a className="pixel-button secondary" href="/resume.pdf">
+          <a className="pixel-button secondary" href={resumePdf}>
             Get Resume
           </a>
         </div>
@@ -302,14 +305,14 @@ function ResumePanel() {
         <p>
 I’m a Computer Science student focused on full-stack development, API integration, and user-centered software. Through projects and freelance work, I’ve built applications involving AI tools, backend services, databases, web scraping, and responsive interfaces.
         </p>
-        <a className="pixel-button primary" href="/resume.pdf">
+        <a className="pixel-button primary" href={resumePdf}>
           Open Resume PDF
         </a>
       </article>
 
       <div className="resume-right">
         <div className="resume-preview">
-          <iframe src="/resume.pdf" title="Resume preview" />
+          <iframe src={resumePdf} title="Resume preview" />
         </div>
 
         <section className="skill-cloud" aria-label="Technical skills">
