@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import backgroundVideo from '../backgroundvideo.mp4';
 import portfolioVideo from './assets/portfoliovideo.mp4';
-import resumeVideo from '../dist/assets/resumevideo-jKlqH_T3.mp4';
-import contactVideo from '../dist/assets/contact.mp4';
+import resumeVideo from './assets/resumevideo.mp4';
+import contactVideo from './assets/contact.mp4';
 
 const profilePhoto = '/portrait.png';
 
