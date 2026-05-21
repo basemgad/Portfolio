@@ -331,8 +331,7 @@ function ContactPanel() {
       <p className="role-tag">Contact</p>
       <h2>Let&apos;s build something.</h2>
       <p>
-        Replace these placeholders with your real links so recruiters and
-        collaborators can reach you quickly.
+        I’m open to software development opportunities, technical collaborations, and projects where I can help build clean and reliable applications.
       </p>
       <div className="contact-links">
         <a href="mailto:basemmohamedgad1@gmail.com">Email</a>
