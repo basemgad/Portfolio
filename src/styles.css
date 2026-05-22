@@ -1023,6 +1023,135 @@ p {
   }
 }
 
+/* ── Phone (≤ 480px) ─────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .top-hud {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-inline: 16px;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .brand-mark {
+    font-size: 0.52rem;
+    padding: 4px 0;
+  }
+
+  .hud-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    width: 100%;
+  }
+
+  .hud-tab {
+    font-size: 0.44rem;
+    padding: 6px 0;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .scene {
+    width: min(100% - 24px, 1160px);
+    padding: 28px 0 52px;
+  }
+
+  .photo-slot {
+    width: min(220px, 100%);
+    padding: 12px;
+    margin: 0 auto;
+  }
+
+  .role-tag {
+    font-size: 0.48rem;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: clamp(1.3rem, 8vw, 1.8rem);
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .terminal-line {
+    font-size: 0.44rem;
+  }
+
+  .about-layout {
+    gap: 24px;
+  }
+
+  .project-grid {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .project-art {
+    min-height: 120px;
+  }
+
+  .project-copy {
+    padding: 10px 12px;
+  }
+
+  .project-copy p:first-child {
+    font-size: 0.44rem;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .skill-cloud {
+    gap: 8px;
+  }
+
+  .skill-cloud span {
+    font-size: 0.48rem;
+    padding: 6px 10px;
+  }
+
+  .pixel-button,
+  .contact-links a {
+    width: 100%;
+    min-height: 52px;
+    font-size: 0.52rem;
+  }
+
+  .hero-actions,
+  .contact-links {
+    flex-direction: column;
+  }
+}
+
+/* ── Laptop scale controls (921px – 1919px) ─────────────────────────────── */
+@media (min-width: 921px) and (max-width: 1919px) {
+  .about-layout                 { transform: scale(0.75); transform-origin: center center; }
+  .stacked-panel.projects-panel { transform: scale(0.75); transform-origin: center top; }
+  .stacked-panel.resume-panel   { transform: scale(0.75); transform-origin: center top; }
+  .contact-panel                { transform: scale(0.75); transform-origin: center center; }
+
+  #content-track .track-panel:nth-child(2),
+  #content-track .track-panel:nth-child(3) { overflow-y: hidden; }
+}
+
 /* ── 1080p scale controls (1920px viewport) ──────────────────────────────── */
 @media (min-width: 1920px) and (max-width: 2559px) {
   /* HUD */

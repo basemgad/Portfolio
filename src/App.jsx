@@ -242,7 +242,7 @@ function AboutPanel({ onSelectSection }) {
           <span>Hello, I&apos;m</span>
           <span>Basem Mohamed</span>
         </h1>
-        <p className="terminal-line">$ software_engineer -- level = senior</p>
+        <p className="terminal-line">software engineering student graduating 2027</p>
         <p className="intro-copy">
           I build clean, reliable software with a focus on practical problem-solving, intuitive design, and strong user experience. My goal is to create applications that feel simple, useful, and carefully built.
         </p>
@@ -312,7 +312,7 @@ I’m a Computer Science student focused on full-stack development, API integrat
 
       <div className="resume-right">
         <div className="resume-preview">
-          <iframe src={resumePdf} title="Resume preview" />
+          <iframe src={`${resumePdf}#toolbar=0&navpanes=0&scrollbar=0`} title="Resume preview" />
         </div>
 
         <section className="skill-cloud" aria-label="Technical skills">
