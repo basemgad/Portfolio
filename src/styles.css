@@ -228,7 +228,7 @@ a:focus-visible {
 }
 
 #panel-about video {
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.85);
 }
 
 @keyframes green-gradient-flow {
@@ -1141,42 +1141,15 @@ p {
   }
 }
 
-/* ── Laptop (921px – 1919px) ─────────────────────────────────────────────── */
+/* ── Laptop scale controls (921px – 1919px) ─────────────────────────────── */
 @media (min-width: 921px) and (max-width: 1919px) {
-  /* No scroll on any panel */
-  #content-track .track-panel { overflow-y: hidden; }
+  .about-layout                 { transform: scale(0.75); transform-origin: center center; }
+  .stacked-panel.projects-panel { transform: scale(0.75); transform-origin: center top; }
+  .stacked-panel.resume-panel   { transform: scale(0.75); transform-origin: center top; }
+  .contact-panel                { transform: scale(0.75); transform-origin: center center; }
 
-  .scene { padding: 20px 0; }
-
-  h1 { font-size: 2.1rem;  margin-bottom: 14px; }
-  h2 { font-size: 1.5rem;  margin-bottom: 12px; }
-  h3 { font-size: 1rem; }
-  p  { font-size: 1.25rem; }
-
-  .role-tag       { font-size: 0.58rem; margin-bottom: 16px; }
-  .terminal-line  { font-size: 0.6rem;  margin-bottom: 18px; }
-  .intro-copy     { margin-bottom: 26px; }
-
-  .about-layout {
-    grid-template-columns: minmax(180px, 300px) minmax(0, 580px);
-    gap: 48px;
-  }
-
-  .photo-slot { width: min(280px, 100%); }
-
-  .pixel-button,
-  .contact-links a { min-height: 50px; font-size: 0.6rem; }
-
-  .stacked-panel  { width: min(980px, 100%); gap: 18px; }
-
-  .stacked-panel.projects-panel { transform: scale(0.8); transform-origin: center top; }
-  .stacked-panel.resume-panel   { transform: scale(0.8); transform-origin: center top; }
-
-  .project-art    { min-height: 150px; }
-
-  .resume-preview { height: 380px; }
-  .skill-cloud    { gap: 8px; }
-  .skill-cloud span { font-size: 0.52rem; padding: 6px 10px; }
+  #content-track .track-panel:nth-child(2),
+  #content-track .track-panel:nth-child(3) { overflow-y: hidden; }
 }
 
 /* ── 1080p scale controls (1920px viewport) ──────────────────────────────── */
@@ -1188,10 +1161,11 @@ p {
   .hud-tabs   { gap: 68px; }
 
   /* Content panels — change scale() to resize each section on 1080p */
-  .about-layout                 { transform: scale(0.8); transform-origin: center center; }
-  .stacked-panel.projects-panel { transform: scale(0.8); transform-origin: center top; }
-  .stacked-panel.resume-panel   { transform: scale(0.8); transform-origin: center top; }
-  .contact-panel                { transform: scale(0.8); transform-origin: center center; }
+  .about-layout                 { transform: scale(0.85); transform-origin: center center; }
+  .about-layout                 { transform: scale(0.85); transform-origin: center top; }
+  .stacked-panel.projects-panel { transform: scale(0.85); transform-origin: center top; }
+  .stacked-panel.resume-panel   { transform: scale(0.85); transform-origin: center top; }
+  .contact-panel                { transform: scale(0.85); transform-origin: center center; }
 
   /* No scroll on projects or resume panels at 1080p */
   #content-track .track-panel:nth-child(2),
